@@ -57,4 +57,34 @@ spec:
       - name: whoami
         port: 80
     middlewares:
+      - name: redirect
+
+ piVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: whoami
+  labels:
+    app: whoami
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`whoami.bender.sway.org`)
+    kind: Rule
+    services:
+      - name: whoami
+        port: 80
+    middlewares:
       - name: traefik-forward-auth
+  tls:
+    certResolver: myresolver
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: redirect
+spec:
+  redirectScheme:
+    scheme: https
+    permanent: true
+
