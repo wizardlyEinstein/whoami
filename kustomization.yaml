@@ -1,0 +1,8 @@
+namespace: whoami 
+
+resources:
+- whoami.yaml
+- auth.yaml
+
+generators:
+- traefik-forward-auth.yaml
