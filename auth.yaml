@@ -38,9 +38,6 @@ spec:
           value: pretty
         - name: DOMAIN
           value: "sway.org"
-        # INSECURE_COOKIE is required unless using https entrypoint
-        - name: INSECURE_COOKIE
-          value: "true"
         - name: PROVIDERS_GOOGLE_CLIENT_ID
           valueFrom:
             secretKeyRef:
