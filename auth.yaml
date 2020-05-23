@@ -27,6 +27,8 @@ spec:
         - containerPort: 4181
           protocol: TCP
         env:
+        - name: WHITELIST
+          value: "leland.sindt@gmail.com"
         - name: LOG_LEVEL
           value: trace 
         - name: LOG_FORMAT
