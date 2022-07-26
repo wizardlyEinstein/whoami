@@ -34,7 +34,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: http
+  - name: http-test
     port: 80
   selector:
     app: whoami
