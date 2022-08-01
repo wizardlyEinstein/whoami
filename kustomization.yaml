@@ -1,4 +1,4 @@
-namespace: whoami 
+namespace: whoamitwo
 
 resources:
 - whoami.yaml
