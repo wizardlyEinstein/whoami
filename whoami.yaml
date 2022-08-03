@@ -32,7 +32,7 @@ metadata:
     app: whoami
 spec:
   ports:
-  - name: http
+  - name: https-port
     port: 80
   selector:
     app: whoami
