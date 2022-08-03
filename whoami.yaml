@@ -30,9 +30,7 @@ metadata:
   name: whoami
   labels:
     app: whoami
-    hpecp.hpe.com/hpecp-internal-gateway: "true"
 spec:
-  type: NodePort
   ports:
   - name: http
     port: 80
